@@ -1,0 +1,49 @@
+site_name: dcmclient CLI
+site_description: One static binary, 60+ DICOM tools — first-class for people and for agents — a complete command-line toolbox and a self-describing MCP/agent surface.
+site_url: https://dcmkit.github.io/dcmclient/
+repo_url: https://github.com/dcmkit/dcmclient
+repo_name: dcmkit/dcmclient
+docs_dir: docs
+
+theme:
+  name: material
+  features:
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+
+nav:
+  - Home: index.md
+  - Install: install.md
+  - Quickstart: quickstart.md
+  - Agent integration: agents.md
+  - Agent skill:
+      - Overview: skill.md
+      - "Recipes — networking": references/networking.md
+      - "Recipes — AI prep": references/ai-prep.md
+      - "Recipes — structured objects": references/structured-objects.md
+      - "Recipes — render & export": references/render-export.md
+  - Tool reference: reference.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+
+plugins:
+  - search
